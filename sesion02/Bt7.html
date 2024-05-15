@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       function hasPrimeNumber(...array) {
+    let result = array.some((item, index, array) => {
+        let count = 0;
+        for (let i = 2; i <= Math.sqrt(item); i++) {
+            if (item % i === 0) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            console.log(false);
+        } else {
+            console.log(true);
+        }
+    });
+}
+
+hasPrimeNumber(4, 6, 8, 9, 10); 
+hasPrimeNumber(4, 6, 8, 9, 11); 
+
+
+
+
+    </script>
+</body>
+</html>

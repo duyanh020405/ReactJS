@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let list = ["duyanh", "hoangan", "phanan", "thecuong", "a"];
+      const numbers = [1, 4, 3, 5, 7, 12, 2];
+      let newNumber2 = list.sort(); // big -> small
+      // sort sắp xếp theo thứ tự bảng chữ cái
+      // ((a,b)=>a-b) -> lớn đến bé và ngược lại
+      console.log(newNumber2);
+
+      let std = [
+        {
+          name: "hoa",
+          id: 13,
+        },
+        { name: "binh", id: 13 },
+        { name: "nam", id: 13 },
+        { name: "thu an", id: 13 },
+      ];
+      let check = std.sort((a,b) =>{
+        if(a.name>b.name){
+            return a.name-b.name
+        }
+        else if(a.name>b.name){
+            return a.name-b.name
+        }
+        else{
+            return-1
+        }
+       
+
+      });
+      console.log(check);
+    </script>
+  </body>
+</html>

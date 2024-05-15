@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+   <script>
+       /*
+       let acc
+
+    */
+   let acc = [
+      {
+         userName : "hoa",
+         pass :"12345"
+      },
+      {
+         userName : "hoa2",
+         pass :"123 45"
+      },
+      {
+         userName : "hoa3",
+         pass :"12345"
+      }
+   ]
+      let result = acc.find((item,index,array)=>{
+         return item.pass.includes(" ")
+      })
+      if(result){
+         console.log(" index  :",acc.indexOf(result) );
+      }
+      else{
+         console.log("moi tk hop le");
+      }
+   </script>
+ </body>
+
+ </html>+

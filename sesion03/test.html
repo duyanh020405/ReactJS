@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   function them(...arrList) {
+    // Sử dụng Math.min với apply và map để lấy độ dài nhỏ nhất của các mảng con
+    const minLength = Math.min(...arrList.map(arr => arr.length));
+
+    const result = [];
+    for (let i = 0; i < minLength; i++) {
+        const con = [];
+        for (let arr of arrList) {
+            con.push(arr[i]);
+        }
+        result.push(con);
+    }
+    return result;
+}
+
+const merged = them([1, 2, 3], ['a', 'b', 'c'], [true, false, true]);
+console.log(merged);
+
+    </script>
+</body>
+</html>

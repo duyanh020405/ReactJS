@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let list = [
+        {
+          id: 1,
+          name: "1",
+          quantity: 1,
+          price: 1,
+        },
+        {
+          id: 2,
+          name: "2",
+          quantity: 2,
+          price: 2,
+        },
+        {
+          id: 3,
+          name: "3",
+          quantity: 3,
+          price: 3,
+        },
+      ];
+      localStorage.setItem("list", JSON.stringify(list));
+      // Hàm để sửa thông tin của sản phẩm trong danh sách
+  // Function to retrieve list from localStorage
+  function getListFromLocalStorage() {
+    let storedList = localStorage.getItem("list");
+    if (storedList) {
+      return JSON.parse(storedList);
+    } else {
+      return [];
+    }
+  }
+
+ 
+  function editProduct(id, newName, newQuantity, newPrice) {
+    let storedList = getListFromLocalStorage();
+    let productIndex = storedList.findIndex(product => product.id === id);
+
+    if (productIndex !== -1) {
+      storedList[productIndex].name = newName;
+      storedList[productIndex].quantity = newQuantity;
+      storedList[productIndex].price = newPrice;
+
+      saveListToLocalStorage(storedList);
+      console.log("Product information updated successfully.");
+    } else {
+      console.log("Product not found in the list.");
+    }
+  }
+//  vd 
+//   let productIdToEdit = 2;
+//   let newName = "New Product Name";
+//   let newQuantity = 5;
+//   let newPrice = 10;
+  editProduct(productIdToEdit, newName, newQuantity, newPrice);
+
+//xoa
+function deleteProduct(id) {
+    let storedList = getListFromLocalStorage();
+    let updatedList = storedList.filter(product => product.id !== id);
+
+    saveListToLocalStorage(updatedList);
+    console.log("xóa oke");
+  }
+  let productIdToDelete = 2;
+  deleteProduct(productIdToDelete);
+</script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        let array = [10, 20, 30, 40, 50];
+let number = 35;
+   function findMaxLessThanOrEqualTo(arr, num) {
+    let max = Number.MIN_SAFE_INTEGER;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= num && arr[i] > max) {
+            max = arr[i]; 
+        }
+    }
+    return max;
+}
+
+console.log(findMaxLessThanOrEqualTo(array, number)); 
+
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printArgs(...args) {
+  for (let arg of args) {
+    console.log(arg);
+  }
+}
+printArgs(1, 2, 3);
+printArgs("Hello", "world");
+printArgs(1, "two", { three: 3 });
+
+    </script>
+</body>
+</html>

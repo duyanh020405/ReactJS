@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+
+      function ham(...objects){
+        let i = {};
+        for(let obj of objects){
+            for(let key in obj){
+                i[key]=obj[key]
+            }
+
+        }
+        return i
+      }
+
+      // Sử dụng hàm với các đối tượng là tham số
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { b: 3, c: 4 };
+      const obj3 = { c: 5, d: 6 };
+
+      const merged = ham(obj1, obj2, obj3);
+      console.log(merged);
+    </script>
+  </body>
+</html>

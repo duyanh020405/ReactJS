@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!--
+        reduce : tinh toan
+            -->
+    <script>
+        let numbers = [5,7,9,11]
+        let result = 0
+        // tinh tong tat ca cac phan tu
+        for(let i = 0 ; i < numbers.length ; i++){
+            result +=numbers[i]
+        }
+        console.log(result);
+        const sum = numbers.reduce((item,index)=>{
+            return item + index
+        })
+        console.log(sum);
+        const sum2 = numbers.reduce((item,index)=>{
+            return item + index
+        },0)
+        console.log(sum2);
+
+        let products = [
+    {
+        name: "iphone 5",
+        quantity: 5,
+        price: 2000
+    },
+    {
+        name: "iphone 6",
+        quantity: 6,
+        price: 5000
+    },
+    {
+        name: "iphone 7",
+        quantity: 8,
+        price: 8000
+    }
+];
+
+let sum4 = products.reduce((sum, item) => { return sum + item.quantity * item.price}, 0);
+console.log(sum4);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Tim kiem vi tri cua phan tu :
+        neu co tra ve vi tri
+        neu khong co thi tra ve -1
+
+
+    -->
+    <script>
+        let student = [
+          { id: 15, name: "MinhThu", address: "HaNoi" },
+          { id: 16, name: "MinhThu2", address: "HaNoi2" },
+          { id: 17, name: "MinhThu3", address: "HaNoi3" },
+        ];
+        let ressult = student.findIndex((item, index, array) => {
+          return item.name === "MinhThu3";
+        });
+        console.log(ressult);
+      </script>
+</body>
+</html>

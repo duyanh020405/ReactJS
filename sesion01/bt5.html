@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+let accounts = [
+    { userName: 'user1', password: 'pass word' },
+    { userName: 'user2', password: 'password' },
+    { userName: 'user3', password: 'password123' }
+];
+
+function checkAccounts(accounts) {
+    let invalidPasswords = [];
+    accounts.forEach((account, index) => {
+        if (account.password.includes(' ')) {
+            invalidPasswords.push(index);
+        }
+    });
+        console.log('Các tài khoản hợp lệ là:');
+        accounts.forEach(account => {
+            console.log('Tên người dùng:', account.userName, ', Mật khẩu:', account.password);
+        });
+}
+
+checkAccounts(accounts);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = [1,2,3,4,5]
+        let hi = number.every(number => number >0)
+        console.log(hi);
+
+        let list = [
+            {
+                name : "mai",
+                gender : "male",
+                address : "hn"
+        },
+        {
+                name : "mai2",
+                gender : "female",
+                address : "hn"
+        },
+        {
+                name : "mai3",
+                gender : "female",
+                address : "hn"
+        },
+        ]
+        let check = list.every(list => list.gender === "male")
+        let check2 = list.every(list => list.address === "hn")
+        console.log(check,check2)
+    </script>
+</body>                                          
+</html>

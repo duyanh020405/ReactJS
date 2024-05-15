@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let books = [
+        { id: 15, name: "MinhThu", address: "HaNoi" },
+        { id: 16, name: "MinhThu2", address: "HaNoi2" },
+        { id: 17, name: "MinhThu3", address: "HaNoi3" },
+      ];
+      let ressult = books.find((item, index, array) => {
+        return item.name === "MinhThu3";
+      });
+      console.log(ressult);
+    </script>
+  </body>
+</html>

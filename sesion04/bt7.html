@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="show"></div>
+    <script>
+        let listNew = [];
+    
+        function addContact(name, sdt, email) {
+            let user = { name, sdt, email };
+            listNew.push(user);
+        }
+    
+        function displayContact() { 
+            let html = ""; 
+            for (let i = 0; i < listNew.length; i++) {
+                html += "<p>Name: " + listNew[i].name + ", Phone: " + listNew[i].sdt + 
+                  ", Email: " + listNew[i].emacil + "</p>";
+            }
+            document.getElementById("show").innerHTML = html; 
+        }
+        addContact("duy", "123456789", "duy.com");
+        addContact("anh", "987654321", "anh.com");
+        displayContact();
+    </script>
+    
+  </body>
+</html>
